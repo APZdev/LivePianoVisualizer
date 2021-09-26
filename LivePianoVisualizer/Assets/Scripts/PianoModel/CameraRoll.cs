@@ -29,7 +29,6 @@ public class CameraRoll : MonoBehaviour
             }
             cameraOrbit.SetActive(true);
         }
-
     }
     private void cameraRoll()
     {

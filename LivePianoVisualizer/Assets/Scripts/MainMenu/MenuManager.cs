@@ -4,7 +4,6 @@ using NaughtyAttributes;
 using UnityEngine.SceneManagement;
 using SFB;
 using System.IO;
-using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
@@ -80,7 +79,6 @@ public class MenuManager : MonoBehaviour
     private Vector3 defaultCameraPosition;
 
     private Essentials essentials;
-    public InputAction uiInputs;
 
     #endregion
 
@@ -105,16 +103,6 @@ public class MenuManager : MonoBehaviour
         LaserSettings();
         WebcamSettings();
         BackgroundImageSettings();
-    }
-
-    private void OnEnable()
-    {
-        uiInputs.Enable();
-    }
-
-    private void OnDisable()
-    {
-        uiInputs.Disable();
     }
 
     #endregion
@@ -266,7 +254,7 @@ public class MenuManager : MonoBehaviour
     {
         bool barStatus;
         barStatus = true;
-        Vector3 screenPoint = uiInputs.ReadValue<Vector2>();
+        Vector3 screenPoint = Input.mousePosition;
 
 
         //Check if the mouse position on X is smaller than a threshold

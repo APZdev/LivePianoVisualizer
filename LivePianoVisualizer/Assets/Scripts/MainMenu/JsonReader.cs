@@ -17,9 +17,7 @@ public class JsonReader : MonoBehaviour
         menuManager = GetComponent<Essentials>().menuManager;
 
         if (Application.isEditor)
-        {
             path = Application.dataPath + "/Ressources/appSettings.json";
-        }
         else
         {
             path = Application.dataPath + "/appSettings.json";
