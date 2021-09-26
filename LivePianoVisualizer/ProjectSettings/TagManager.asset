@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Note
+  - SpawnPoint
+  - FOK
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - IgnorePostProcessing
+  - Webcam
+  - BackgroundTexture
+  - PianoScene
+  - BackgroundImage
+  - PostProcessing
+  - Notes
+  - Particles
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Image
+    uniqueID: 2712762959
+    locked: 0
+  - name: Particles
+    uniqueID: 1869034991
+    locked: 0

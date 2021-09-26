@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=rlC95aTKzm0
+
+In powershell after doing the steps in the video
+-> Enter the commands line and change the name of the input file to match the one you want to change ("Input.mov" to "MyVideoName.mov")
+
+ffmpeg -i Input.mov -c:v libvpx -pix_fmt yuva420p -b:v 1M -auto-alt-ref 0 -metadata:s:v:0 alpha_mode="1" -c:a libvorbis Output.webm

@@ -1,0 +1,6 @@
+get pedal state using MidiMaster.GetKnob(knobNumber);
+get pedal number using indicator.knobNumber = channels[indicators.Count];
+-> see the midijack example
+sustain id -> 64
+sostenuto id -> 66
+una corda id -> 67
