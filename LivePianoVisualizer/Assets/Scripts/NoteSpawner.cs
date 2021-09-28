@@ -51,15 +51,11 @@ public class NoteSpawner : MonoBehaviour
         }
 
         CreateNoteObject();
+        MoveNotesObject();
         UpdateParticlesStates();
         //Need to go back on this later, not really useful -> more for other peoples
         //UpdateKeyboardKeys();
         SendInputsToArduino();
-    }
-
-    private void FixedUpdate()
-    {
-        MoveNotesObject();
     }
 
     #endregion
@@ -89,7 +85,7 @@ public class NoteSpawner : MonoBehaviour
             {
                 //make move only the top of the note
                 //existantNotes[0].transform.localScale += new Vector3(0f, midiInputManager.glidingSpeed, 0f);
-                existantNotes[0].GetComponent<SpriteRenderer>().size += new Vector2(0f , essentials.gameManger.glidingSpeed);
+                existantNotes[0].GetComponent<SpriteRenderer>().size += new Vector2(0f , essentials.gameManger.glidingSpeed) * Time.deltaTime * 100;
                 existantNotes[0].GetComponent<NoteBehaviour>().hasFinished = false;
             }
             else

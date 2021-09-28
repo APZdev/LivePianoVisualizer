@@ -12,6 +12,7 @@ public class CameraOrbit : MonoBehaviour
     [BoxGroup("Mouse settings")] [SerializeField] private float scrollSensitivity = 250f;
     [BoxGroup("Mouse settings")] [SerializeField] private float minCameraDistance = 3f;
     [BoxGroup("Mouse settings")] [SerializeField] private float maxCameraDistance = 50f;
+    [BoxGroup("Mouse settings")] [SerializeField] private float cameraLerpSpeed = 50f;
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class CameraOrbit : MonoBehaviour
         else if (xRot < -89f)
             xRot = -89f;
 
-        transform.position = target.position + Quaternion.Euler(xRot, yRot, 0f) * (currentCameraDistance * -Vector3.back);
+        transform.position = Vector3.Lerp(transform.position, target.position + Quaternion.Euler(xRot, yRot, 0f) * (currentCameraDistance * -Vector3.back), cameraLerpSpeed);
         transform.LookAt(target.position, Vector3.up);
     }
 }

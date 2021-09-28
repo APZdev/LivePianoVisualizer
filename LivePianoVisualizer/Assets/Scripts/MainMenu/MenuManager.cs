@@ -176,6 +176,7 @@ public class MenuManager : MonoBehaviour
 
     public void OnClick_ClearBackgroundImage()
     {
+        backgroundImageTempPath = "";
         backgroundImageObject.material.SetTexture("_BaseMap", null);
         backgroundImageObject.material.SetColor("_BaseMap", new Color(0, 0, 0, 0));
         backgroundImageOffsetX.value = 1;
@@ -192,7 +193,8 @@ public class MenuManager : MonoBehaviour
         //Open the file browser to select the picture
         string[] path = StandaloneFileBrowser.OpenFilePanel("Choose an Image...", "", extensions, false);
 
-        ApplyImageToBackground(path[0]);
+        if(path.Length > 0)
+            ApplyImageToBackground(path[0]);
     }
 
     public void ApplyImageToBackground(string path)

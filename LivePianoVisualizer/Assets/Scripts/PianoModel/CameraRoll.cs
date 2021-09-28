@@ -12,7 +12,7 @@ public class CameraRoll : MonoBehaviour
 
     public Animator fadeAnimator;
 
-    void Update()
+    private void Update()
     {
         if(Input.GetKeyDown(KeyCode.C))
             cameraRollEnabled = !cameraRollEnabled;
@@ -30,17 +30,18 @@ public class CameraRoll : MonoBehaviour
             cameraOrbit.SetActive(true);
         }
     }
+
     private void cameraRoll()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (Input.GetKeyDown(KeyCode.Alpha0))
             cameraIndexChanger(1);
-        else if (Input.GetKeyDown(KeyCode.Keypad2))
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
             cameraIndexChanger(2);
-        else if (Input.GetKeyDown(KeyCode.Keypad3))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
             cameraIndexChanger(3);
-        else if (Input.GetKeyDown(KeyCode.Keypad4))
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
             cameraIndexChanger(4);
-        else if (Input.GetKeyDown(KeyCode.Keypad5))
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
             cameraIndexChanger(5);
     }
 

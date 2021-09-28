@@ -1,2 +1,13 @@
 4:3 16:9
 
+-Cleanup overall project architecture (code dispatch)
+
+-Add full customizable rgb pannel (don't forget to serialize)
+-Add background image opactity option
+-Add dark fade size change
+
+-Fix smoke fps issue
+-Fix particle trails spawn problem
+-Fix background image, when there are no image applied it should be black instead of white
+
+
