@@ -1,2 +1,2 @@
-# LivePianoVisualizer
+# MIDIPianoVisualizer
  Realtime midi piano visualizer.
